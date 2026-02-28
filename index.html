@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GS Games</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        }
+
+        body {
+            background: #0a0c0f;
+            color: white;
+        }
+
+        /* Pasek adresu */
+        .browser-bar {
+            background: #1a1e26;
+            padding: 12px 20px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .browser-dots {
+            display: flex;
+            gap: 8px;
+        }
+
+        .dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+        }
+
+        .red { background: #ff5f56; }
+        .yellow { background: #ffbd2e; }
+        .green { background: #27c93f; }
+
+        .browser-address {
+            background: #2a2e37;
+            color: #9aa0a8;
+            padding: 6px 15px;
+            border-radius: 6px;
+            flex: 1;
+            font-size: 14px;
+        }
+
+        /* Nawigacja */
+        nav {
+            background: #0f1115;
+            padding: 15px 25px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 1px solid #2a2e37;
+        }
+
+        .logo {
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 25px;
+        }
+
+        .nav-links a {
+            color: #9aa0a8;
+            text-decoration: none;
+            font-size: 15px;
+        }
+
+        .nav-links a:first-child {
+            color: white;
+        }
+
+        /* Główna sekcja */
+        .main {
+            background: #0f1115;
+            padding: 60px 25px;
+            text-align: center;
+            border-bottom: 1px solid #2a2e37;
+        }
+
+        .main h1 {
+            font-size: 36px;
+            margin-bottom: 15px;
+        }
+
+        .main p {
+            color: #9aa0a8;
+            max-width: 600px;
+            margin: 0 auto 30px;
+            font-size: 16px;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 12px 25px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-size: 15px;
+        }
+
+        .btn-white {
+            background: white;
+            color: black;
+        }
+
+        .btn-gray {
+            background: transparent;
+            color: white;
+            border: 1px solid #2a2e37;
+        }
+
+        /* Kafelki gier */
+        .games {
+            background: #0f1115;
+            padding: 40px 25px;
+        }
+
+        .games h2 {
+            margin-bottom: 25px;
+            font-size: 24px;
+        }
+
+        .game-cards {
+            display: flex;
+            gap: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .game-card {
+            background: #1a1e26;
+            border-radius: 8px;
+            overflow: hidden;
+            flex: 1;
+        }
+
+        .game-image {
+            height: 150px;
+            background: linear-gradient(135deg, #ff6b6b, #4ecdc4);
+        }
+
+        .game-card:last-child .game-image {
+            background: linear-gradient(135deg, #a8e6cf, #d4ed9a);
+        }
+
+        .game-tag {
+            padding: 10px;
+        }
+
+        .age {
+            background: #2a2e37;
+            color: #9aa0a8;
+            padding: 4px 10px;
+            border-radius: 4px;
+            font-size: 12px;
+        }
+
+        /* Statystyki */
+        .stats {
+            background: #0f1115;
+            padding: 30px 25px;
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+            border-top: 1px solid #2a2e37;
+        }
+
+        .stat {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 28px;
+            font-weight: bold;
+            display: block;
+        }
+
+        .stat-label {
+            color: #9aa0a8;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Pasek przeglądarki -->
+    <div class="browser-bar">
+        <div class="browser-dots">
+            <span class="dot red"></span>
+            <span class="dot yellow"></span>
+            <span class="dot green"></span>
+        </div>
+        <div class="browser-address">gs-games.netlify.app</div>
+    </div>
+
+    <!-- Menu -->
+    <nav>
+        <div class="logo">GS Games</div>
+        <div class="nav-links">
+            <a href="#">Home</a>
+            <a href="#">Browse</a>
+            <a href="#">Upload</a>
+            <a href="#">GS Editor</a>
+        </div>
+    </nav>
+
+    <!-- Główna sekcja -->
+    <div class="main">
+        <h1>Play & Create Games Together</h1>
+        <p>Upload your games in PPTX, SB3, EXE or ZIP format — or build one right here with the GS Editor.</p>
+        <div class="buttons">
+            <a href="#" class="btn btn-white">Browse Games</a>
+            <a href="#" class="btn btn-gray">Upload a Game</a>
+            <a href="#" class="btn btn-gray">Open GS Editor</a>
+        </div>
+    </div>
+
+    <!-- Gry -->
+    <div class="games">
+        <h2>Recent Games</h2>
+        <div class="game-cards">
+            <div class="game-card">
+                <div class="game-image"></div>
+                <div class="game-tag">
+                    <span class="age">All Ages</span>
+                </div>
+            </div>
+            <div class="game-card">
+                <div class="game-image"></div>
+                <div class="game-tag">
+                    <span class="age">All Ages</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Statystyki -->
+    <div class="stats">
+        <div class="stat">
+            <span class="stat-number">45</span>
+            <span class="stat-label">Total Visits</span>
+        </div>
+        <div class="stat">
+            <span class="stat-number">2</span>
+            <span class="stat-label">Games Published</span>
+        </div>
+        <div class="stat">
+            <span class="stat-number">2</span>
+            <span class="stat-label">Community Members</span>
+        </div>
+    </div>
+</body>
+</html>
